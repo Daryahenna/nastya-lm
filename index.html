@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Анастасия Детцель">
+
+<!-- SEO -->
+<title>Почему терапия не помогает: почему ты всё понимаешь, но ничего не меняется</title>
+<meta name="description" content="Ты в терапии, читала книги, проходила курсы — а реакции прежние? Гайд объясняет, почему инсайты не меняют поведение и как работает телесный уровень травмы. Мини-практика внутри.">
+<meta name="keywords" content="телесная терапия, травма в теле, почему терапия не помогает, инсайты не работают, психосоматика, соматическая терапия, PF_R, работа с телом, телесно-ориентированная терапия">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Почему ты всё понимаешь, но ничего не меняется">
+<meta property="og:description" content="Гайд для тех, кто уже был в терапии, но реакции не меняются. Телесный уровень работы с травмой — и мини-практика прямо сейчас.">
+<meta property="og:url" content="https://anastasiadetzel.com/LM1">
+<meta property="og:image" content="https://anastasiadetzel.com/lm_images/img_01_woman_ribbons.png">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Анастасия Детцель — телесная терапия">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Почему ты всё понимаешь, но ничего не меняется">
+<meta name="twitter:description" content="Гайд: почему инсайты не меняют поведение и что делать с телом.">
+<meta name="twitter:image" content="https://anastasiadetzel.com/lm_images/img_01_woman_ribbons.png">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://anastasiadetzel.com/LM1">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Почему ты всё понимаешь, но ничего не меняется",
+  "description": "Гайд для тех, кто уже прошёл терапию, читал книги и проходил курсы — но реакции не меняются. О телесном уровне работы с травмой.",
+  "author": {
+    "@type": "Person",
+    "name": "Анастасия Детцель",
+    "url": "https://anastasiadetzel.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Анастасия Детцель — телесная терапия",
+    "url": "https://anastasiadetzel.com"
+  },
+  "inLanguage": "ru",
+  "articleSection": "Телесная терапия",
+  "keywords": "телесная терапия, травма в теле, психосоматика, соматическая терапия, PF_R",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://anastasiadetzel.com/LM1"
+  }
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Playfair+Display:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --bg:     #0d0c0c;
+  --bg2:    #131211;
+  --text:   #e2ddd8;
+  --muted:  #68635f;
+  --dim:    #2e2c2a;
+  --accent: #e03d1a;
+  --blue:   #6ab4f5;
+  --col:    680px;
+}
+
+html{scroll-behavior:smooth}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Inter',sans-serif;
+  font-size:17px;
+  line-height:1.78;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ── PROGRESS BAR ─────────────────────────────── */
+#bar{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  background:rgba(13,12,12,.96);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(255,255,255,.06);
+  padding:10px 20px;
+  display:flex;align-items:center;gap:14px;
+}
+#bar-track{flex:1;height:2px;background:rgba(255,255,255,.07);border-radius:2px;overflow:hidden}
+#bar-fill{height:100%;width:0%;background:var(--accent);border-radius:2px;transition:width .12s}
+#bar-pct{font-size:11px;color:var(--accent);font-weight:700;min-width:28px;font-variant-numeric:tabular-nums}
+#bar-name{font-size:11px;color:var(--muted);white-space:nowrap}
+
+/* ── SIDE NAV ──────────────────────────────────── */
+#snav{
+  position:fixed;right:20px;top:50%;transform:translateY(-50%);
+  z-index:199;display:flex;flex-direction:column;gap:8px;
+}
+.sn{width:6px;height:6px;border-radius:50%;background:var(--dim);cursor:pointer;
+  transition:background .2s,transform .2s;position:relative}
+.sn:hover,.sn.on{background:var(--accent);transform:scale(1.5)}
+.sn .tip{
+  position:absolute;right:14px;top:50%;transform:translateY(-50%);
+  background:var(--bg2);border:1px solid rgba(255,255,255,.08);
+  color:var(--text);font-size:11px;padding:3px 8px;border-radius:4px;
+  white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .1s;
+}
+.sn:hover .tip{opacity:1}
+
+/* ── LAYOUT ────────────────────────────────────── */
+.wrap{max-width:var(--col);margin:0 auto;padding:0 24px 100px}
+
+/* ── REVEAL ─────────────────────────────────────  */
+.sec{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;padding-top:88px}
+.sec.in{opacity:1;transform:none}
+#s0{opacity:1;transform:none;padding-top:0}
+
+/* ── HERO ───────────────────────────────────────── */
+.hero{
+  min-height:100vh;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:80px 0 60px;
+  max-width:560px;
+}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:700;letter-spacing:2px;
+  text-transform:uppercase;color:var(--accent);
+  margin-bottom:28px;
+}
+.hero-kicker::before{
+  content:'';display:block;width:20px;height:1px;background:var(--accent);
+}
+h1{
+  font-size:clamp(38px,7vw,64px);
+  font-weight:900;line-height:1.08;
+  color:#fff;letter-spacing:-1.5px;
+  margin-bottom:18px;
+}
+h1 em{font-style:normal;color:var(--accent)}
+.hero-lead{
+  font-size:clamp(17px,2.5vw,20px);
+  color:var(--muted);line-height:1.65;
+  max-width:520px;margin-bottom:44px;
+}
+.hero-meta{
+  display:flex;align-items:center;gap:20px;
+  padding-top:28px;
+  border-top:1px solid rgba(255,255,255,.06);
+}
+.hero-badge{
+  font-size:12px;color:var(--muted);
+  display:flex;align-items:center;gap:6px;
+}
+.hero-badge svg{opacity:.4}
+.hero-tag{
+  font-size:11px;font-weight:600;letter-spacing:.5px;
+  padding:4px 10px;border-radius:20px;
+  border:1px solid rgba(255,255,255,.1);
+  color:rgba(255,255,255,.5);
+}
+
+/* ── SECTION HEADING ────────────────────────────── */
+.sec-wrap{position:relative}
+.sec-bg-num{
+  position:absolute;
+  top:-16px;left:-8px;
+  font-size:130px;font-weight:900;line-height:1;
+  color:rgba(255,255,255,.03);
+  pointer-events:none;user-select:none;
+  font-variant-numeric:tabular-nums;
+  z-index:0;
+}
+.sec-head{position:relative;z-index:1;margin-bottom:36px}
+.sec-label{
+  font-size:11px;font-weight:700;letter-spacing:2px;
+  text-transform:uppercase;color:var(--accent);
+  display:block;margin-bottom:12px;
+}
+h2{
+  font-family:'Inter',sans-serif;
+  font-size:clamp(24px,4vw,34px);
+  font-weight:800;line-height:1.18;
+  color:#fff;letter-spacing:-.5px;
+}
+h2 em{font-style:normal;color:var(--accent)}
+h2 .b{color:var(--blue)}
+
+/* ── SUBHEAD ─────────────────────────────────────── */
+h3{
+  font-size:12px;font-weight:700;
+  letter-spacing:2px;text-transform:uppercase;
+  color:var(--muted);margin:36px 0 14px;
+}
+
+/* ── BODY ────────────────────────────────────────── */
+p{margin-bottom:18px;color:rgba(226,221,216,.8)}
+p:last-child{margin-bottom:0}
+p strong,.bold{color:var(--text);font-weight:600}
+em.o{font-style:normal;color:var(--accent)}
+em.b{font-style:normal;color:var(--blue)}
+em.it{font-style:italic;color:var(--muted)}
+
+/* ── LIST ────────────────────────────────────────── */
+ul.lst{list-style:none;margin:16px 0;display:flex;flex-direction:column;gap:10px}
+ul.lst li{
+  padding-left:18px;position:relative;
+  color:rgba(226,221,216,.72);font-size:16px;line-height:1.65;
+}
+ul.lst li::before{
+  content:'';position:absolute;left:4px;top:10px;
+  width:4px;height:4px;border-radius:50%;
+  background:var(--accent);opacity:.5;
+}
+ul.lst li strong{color:var(--text)}
+
+/* ── EDITORIAL CASES (no borders — typography only) ─ */
+.cases{margin:40px 0}
+.case-item{
+  display:grid;
+  grid-template-columns:52px 1fr;
+  gap:0 16px;
+  padding:40px 0;
+  border-top:1px solid rgba(255,255,255,.06);
+}
+.case-item:last-child{border-bottom:1px solid rgba(255,255,255,.06)}
+.case-n{
+  font-size:56px;font-weight:900;
+  color:rgba(226,221,216,.05);
+  line-height:1;letter-spacing:-2px;
+  user-select:none;padding-top:4px;
+}
+.case-tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:16px}
+.case-tag{
+  font-size:12px;color:var(--muted);
+  padding:3px 9px;
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:20px;
+}
+.case-but{
+  font-size:clamp(16px,2.5vw,19px);
+  font-weight:700;color:#fff;
+  line-height:1.5;
+  padding-top:14px;
+  border-top:1px solid rgba(226,221,216,.07);
+  margin-top:2px;
+}
+
+/* ── TYPOGRAPHIC VERSUS (no table) ──────────────── */
+.versus{
+  display:grid;
+  grid-template-columns:1fr 1px 1fr;
+  gap:0 28px;
+  margin:32px 0;
+  padding:28px 0;
+  align-items:start;
+}
+.versus-divider{background:rgba(255,255,255,.07)}
+.versus-side{display:flex;flex-direction:column;gap:14px}
+.versus-side-label{
+  font-size:10px;font-weight:700;
+  letter-spacing:2px;text-transform:uppercase;
+}
+.versus-side-label.blue{color:var(--blue)}
+.versus-side-label.red{color:var(--accent)}
+.versus-quote{
+  font-style:italic;font-size:14px;
+  color:rgba(106,180,245,.7);
+  line-height:1.65;
+}
+.versus-body{list-style:none}
+.versus-body li{
+  font-size:15px;
+  color:rgba(224,61,26,.75);
+  padding:7px 0;
+  border-bottom:1px solid rgba(224,61,26,.08);
+}
+.versus-body li:last-child{border-bottom:none}
+
+/* ── CONTRAST STATEMENT ──────────────────────────── */
+.contrast{
+  margin:36px 0;
+  padding:36px 0;
+  border-top:1px solid rgba(255,255,255,.07);
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+.contrast-a{
+  font-size:clamp(17px,2.8vw,22px);
+  color:var(--muted);line-height:1.45;
+  margin-bottom:0;
+}
+.contrast-sep{
+  width:28px;height:2px;
+  background:var(--accent);
+  margin:20px 0;
+}
+.contrast-b{
+  font-size:clamp(20px,3.5vw,28px);
+  font-weight:800;color:#fff;
+  line-height:1.3;margin-bottom:0;
+}
+.contrast-b span{color:var(--accent)}
+
+/* ── FULL-COLUMN MOMENT ──────────────────────────── */
+.moment{
+  margin:48px -24px;
+  padding:52px 24px;
+  background:rgba(224,61,26,.06);
+  border-top:1px solid rgba(224,61,26,.14);
+  border-bottom:1px solid rgba(224,61,26,.14);
+  text-align:center;
+}
+.moment p{
+  font-size:clamp(18px,3vw,24px);
+  font-weight:700;color:#fff;
+  max-width:540px;margin:0 auto;
+  line-height:1.45;
+}
+.moment p span{color:var(--accent)}
+
+/* ── PULL QUOTE ──────────────────────────────────── */
+.pull{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(20px,3.2vw,28px);
+  font-style:italic;font-weight:400;
+  color:var(--text);line-height:1.45;
+  padding:32px 0;
+  border-top:1px solid rgba(255,255,255,.06);
+  border-bottom:1px solid rgba(255,255,255,.06);
+  margin:40px 0;
+  text-align:center;
+}
+.pull strong{font-style:normal;color:var(--accent);font-weight:700}
+
+/* ── CALLOUT ─────────────────────────────────────── */
+.call{
+  padding:18px 22px;
+  background:rgba(255,255,255,.03);
+  border-left:2px solid var(--accent);
+  margin:24px 0;
+  font-size:16px;line-height:1.7;
+  color:rgba(226,221,216,.78);
+}
+.call.blue{border-left-color:var(--blue)}
+.call b{color:var(--text);font-weight:600}
+.call .tag{
+  display:block;
+  font-size:10px;font-weight:700;letter-spacing:2px;
+  text-transform:uppercase;color:var(--accent);
+  margin-bottom:8px;
+}
+.call.blue .tag{color:var(--blue)}
+
+/* ── ACCORDION ───────────────────────────────────── */
+.acc{
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:6px;margin:8px 0;overflow:hidden;
+}
+.acc-btn{
+  width:100%;background:rgba(255,255,255,.02);border:none;
+  padding:17px 20px;text-align:left;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+  color:var(--text);font-family:'Inter',sans-serif;
+  font-size:15px;font-weight:500;transition:background .15s;
+}
+.acc-btn:hover{background:rgba(255,255,255,.05)}
+.acc-ico{font-size:18px;color:var(--muted);transition:transform .2s,color .2s;flex-shrink:0}
+.acc.open .acc-ico{transform:rotate(45deg);color:var(--accent)}
+.acc-body{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.acc-inner{
+  padding:4px 20px 20px;border-top:1px solid rgba(255,255,255,.06);
+  font-size:15px;line-height:1.75;color:rgba(226,221,216,.7);
+}
+.acc-inner p{margin-bottom:12px}
+.acc-inner strong{color:var(--text)}
+.acc-inner em{color:var(--accent);font-style:normal}
+.acc-inner .dim{color:var(--muted);font-style:italic}
+.acc-inner ul{list-style:none;margin:10px 0}
+.acc-inner ul li{padding:4px 0 4px 16px;position:relative}
+.acc-inner ul li::before{content:'·';position:absolute;left:0;color:var(--muted)}
+
+/* ── IMAGES ──────────────────────────────────────── */
+figure{margin:40px 0;text-align:center}
+figure img{width:100%;height:auto;border-radius:6px;display:block}
+figure.portrait img{max-width:280px;margin:0 auto}
+figure.medium img{max-width:440px;margin:0 auto}
+figure.photo img{max-height:380px;object-fit:cover;border:1px solid rgba(255,255,255,.06)}
+figcaption{font-size:13px;color:var(--muted);margin-top:10px;font-style:italic}
+
+/* ── SIGNPOST (outcome checklist) ───────────────── */
+.signs{list-style:none;margin:24px 0;display:flex;flex-direction:column;gap:14px}
+.signs li{
+  display:grid;grid-template-columns:24px 1fr;gap:0 12px;
+  align-items:start;font-size:16px;color:rgba(226,221,216,.8);line-height:1.6;
+}
+.signs li .dot{
+  width:6px;height:6px;border-radius:50%;
+  background:var(--accent);margin-top:9px;justify-self:center;
+}
+
+/* ── DIVIDER ─────────────────────────────────────── */
+.div{height:1px;background:rgba(255,255,255,.05);margin:72px 0}
+
+/* ── SPOILER MOMENT ──────────────────────────────── */
+.spoiler{
+  text-align:center;padding:40px 0;margin:40px 0;
+  border-top:1px solid rgba(255,255,255,.06);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.spoiler-kicker{
+  font-size:10px;font-weight:700;letter-spacing:2px;
+  text-transform:uppercase;color:var(--muted);margin-bottom:14px;
+}
+.spoiler-text{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(20px,3.5vw,28px);
+  font-style:italic;color:var(--text);
+  line-height:1.4;
+}
+.spoiler-text strong{font-style:normal;color:var(--accent)}
+
+/* ── KEY-VALUE (root cause display) ──────────────── */
+.kv{
+  display:grid;grid-template-columns:1fr 1fr;
+  margin:32px 0;gap:0;
+}
+.kv-cell{padding:22px 24px}
+.kv-cell:first-child{
+  border-right:1px solid rgba(255,255,255,.07);
+}
+.kv-label{
+  font-size:10px;font-weight:700;letter-spacing:2px;
+  text-transform:uppercase;display:block;margin-bottom:8px;
+}
+.kv-label.blue{color:var(--blue)}
+.kv-label.red{color:var(--accent)}
+.kv-val{
+  font-size:clamp(17px,3vw,22px);
+  font-weight:700;line-height:1.2;
+}
+.kv-val.blue{color:rgba(106,180,245,.85)}
+.kv-val.red{color:rgba(224,61,26,.85)}
+
+/* ── SPLIT ILLUS (image center, text L+R) ───────── */
+.split-illus{
+  display:grid;
+  grid-template-columns:1fr 210px 1fr;
+  gap:0 20px;align-items:center;
+  margin:44px 0;
+}
+.si-img img{width:100%;border-radius:6px;display:block}
+.si-tag{
+  display:block;
+  font-size:10px;font-weight:700;letter-spacing:2px;
+  text-transform:uppercase;margin-bottom:14px;
+}
+.si-tag.blue{color:var(--blue)}
+.si-tag.red{color:var(--accent)}
+/* Big editorial labels for голова/тело split */
+.si-tag-h{
+  display:block;
+  font-family:'Playfair Display',serif;
+  font-size:clamp(18px,2.8vw,24px);
+  font-style:italic;font-weight:700;
+  letter-spacing:0;text-transform:none;
+  margin-bottom:14px;
+}
+.si-tag-h.blue{color:var(--blue)}
+.si-tag-h.red{color:var(--accent)}
+.si-text{
+  font-style:italic;font-size:14px;
+  color:rgba(106,180,245,.75);
+  line-height:1.7;margin-bottom:0;
+}
+.si-list{list-style:none}
+.si-list li{
+  font-size:15px;color:rgba(224,61,26,.82);
+  padding:8px 0;border-bottom:1px solid rgba(224,61,26,.1);
+  font-weight:500;
+}
+.si-list li:last-child{border-bottom:none}
+@media(max-width:640px){
+  .split-illus{grid-template-columns:1fr;gap:20px 0}
+  .si-img{order:-1}
+}
+
+/* ── FROZEN FRAME ────────────────────────────────── */
+.frozen-frame{text-align:center;margin:40px 0}
+.ff-label{
+  display:block;font-size:12px;font-weight:700;
+  letter-spacing:3px;text-transform:uppercase;
+  color:var(--blue);margin-bottom:6px;
+}
+.ff-sub{
+  display:block;font-size:14px;color:var(--muted);
+  font-style:italic;margin-bottom:20px;
+}
+.ff-bot{
+  font-size:13px;color:var(--muted);
+  font-style:italic;margin-top:10px;margin-bottom:0;
+}
+
+/* ── YEAR GAP ────────────────────────────────────── */
+.year-gap{
+  display:flex;align-items:center;
+  margin:44px 0;
+  border-top:1px solid rgba(255,255,255,.06);
+  border-bottom:1px solid rgba(255,255,255,.06);
+  padding:40px 0;
+}
+.yg-side{flex:1;text-align:center;display:flex;flex-direction:column;gap:8px}
+.yg-label{
+  font-size:10px;font-weight:700;letter-spacing:3px;
+  text-transform:uppercase;display:block;
+}
+.yg-label.blue{color:var(--blue)}
+.yg-label.red{color:var(--accent)}
+.yg-big{
+  font-size:clamp(52px,9vw,80px);
+  font-weight:900;line-height:1;
+  letter-spacing:-3px;display:block;
+}
+.yg-side.left .yg-big{color:rgba(106,180,245,.55)}
+.yg-side.right .yg-big{color:rgba(224,61,26,.75);font-size:clamp(28px,5vw,44px);letter-spacing:-1px}
+.yg-note{font-size:13px;color:var(--muted);font-style:italic;display:block}
+.yg-vs{
+  font-size:28px;font-weight:900;
+  color:rgba(255,255,255,.08);
+  padding:0 24px;flex-shrink:0;
+}
+
+/* ── CHECK BLOCK (self-qualification) ───────────── */
+.check-sect{
+  padding:48px 0;margin-bottom:72px;
+  border-top:1px solid rgba(255,255,255,.06);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.check-kicker{
+  display:block;font-size:11px;font-weight:700;
+  letter-spacing:2px;text-transform:uppercase;
+  color:var(--muted);margin-bottom:24px;
+}
+.check-items{display:flex;flex-direction:column;gap:14px}
+.check-item{
+  display:flex;gap:16px;align-items:baseline;
+  font-size:clamp(16px,2.5vw,19px);
+  color:rgba(226,221,216,.85);line-height:1.5;
+  padding:14px 0;
+  border-bottom:1px solid rgba(255,255,255,.04);
+}
+.check-item:last-child{border-bottom:none;padding-bottom:0}
+.ci-plus{
+  color:var(--accent);font-weight:900;
+  font-size:22px;flex-shrink:0;line-height:1;
+  margin-top:2px;
+}
+
+/* ── ICEBERG LABELS ──────────────────────────────── */
+.iceberg-wrap{margin:40px 0}
+.ib-top,.ib-bottom{
+  display:flex;align-items:center;gap:12px;
+  padding:10px 0;
+}
+.ib-label{
+  font-size:11px;font-weight:700;
+  letter-spacing:2px;text-transform:uppercase;flex-shrink:0;
+}
+.ib-label.blue{color:var(--blue)}
+.ib-label.red{color:var(--accent)}
+.ib-note{font-size:14px;color:var(--muted);font-style:italic}
+
+/* ── CASE NAME TAG ───────────────────────────────── */
+.case-tag.name{
+  color:var(--text);font-weight:600;
+  border-color:rgba(255,255,255,.18);
+}
+
+/* ── BRIDGE LABELS ───────────────────────────────── */
+.bridge-wrap{margin:40px 0}
+.bridge-labs{
+  display:flex;justify-content:space-between;
+  align-items:baseline;margin-bottom:12px;
+  padding:0 4px;
+}
+.bl-from{
+  font-family:'Caveat',cursive;
+  font-size:clamp(20px,3.2vw,26px);font-weight:600;
+  color:rgba(226,221,216,.55);
+}
+.bl-to{
+  font-family:'Caveat',cursive;
+  font-size:clamp(20px,3.2vw,26px);font-weight:700;
+  color:var(--accent);
+}
+
+/* ── CTA ─────────────────────────────────────────── */
+.cta{
+  margin:56px -24px 0;
+  padding:64px 24px;
+  background:rgba(224,61,26,.07);
+  border-top:1px solid rgba(224,61,26,.2);
+  text-align:center;
+}
+.cta-kicker{
+  font-size:11px;font-weight:700;letter-spacing:2px;
+  text-transform:uppercase;color:var(--accent);margin-bottom:18px;
+}
+.cta h2{font-size:clamp(26px,5vw,40px);letter-spacing:-.5px;margin-bottom:16px}
+.cta p{color:var(--muted);font-size:16px;max-width:420px;margin:0 auto 32px}
+.cta-btn{
+  display:inline-block;
+  background:var(--accent);color:#fff;
+  font-weight:700;font-size:14px;
+  letter-spacing:.5px;text-transform:uppercase;
+  padding:14px 36px;border-radius:4px;
+  text-decoration:none;
+  transition:opacity .15s,transform .15s;
+}
+.cta-btn:hover{opacity:.88;transform:translateY(-1px)}
+
+/* ── CTA FINAL (new ending) ──────────────────────── */
+.cta-final{
+  margin:56px -24px 0;
+  padding:64px 24px 48px;
+  background:rgba(224,61,26,.06);
+  border-top:1px solid rgba(224,61,26,.18);
+}
+.cta-trigger{
+  font-size:clamp(16px,2.5vw,20px);
+  color:rgba(226,221,216,.65);
+  line-height:1.7;margin-bottom:24px;
+}
+.cta-trigger em{font-style:italic;color:rgba(226,221,216,.9)}
+.cta-echoes{list-style:none;margin:0 0 32px;display:flex;flex-direction:column;gap:10px}
+.cta-echoes li{
+  font-size:clamp(16px,2.2vw,18px);
+  color:rgba(226,221,216,.7);
+  padding-left:20px;position:relative;
+}
+.cta-echoes li::before{content:'«';position:absolute;left:0;color:var(--muted)}
+.cta-link{
+  display:block;
+  font-size:clamp(16px,2.8vw,20px);
+  font-weight:900;color:#fff;
+  text-decoration:none;text-transform:uppercase;
+  letter-spacing:1px;
+  padding:22px 32px;
+  background:var(--accent);
+  border-radius:6px;
+  text-align:center;
+  margin:28px 0;
+  transition:opacity .15s,transform .15s;
+  line-height:1.3;
+  cursor:pointer;
+}
+.cta-link:hover{opacity:.88;transform:translateY(-2px)}
+.cta-link .arrow{display:inline-block;transition:transform .2s;margin-left:6px}
+.cta-link:hover .arrow{transform:translateX(4px)}
+.cta-pfr-note{
+  font-size:15px;color:var(--muted);
+  margin:28px 0 0;line-height:1.75;
+}
+.cta-pfr-note strong{color:var(--text)}
+.cta-outcomes{list-style:none;margin:20px 0 0;display:flex;flex-direction:column;gap:10px}
+.cta-outcomes li{
+  font-size:15px;color:rgba(226,221,216,.75);
+  padding-left:22px;position:relative;line-height:1.6;
+}
+.cta-outcomes li::before{
+  content:'';position:absolute;left:4px;top:9px;
+  width:5px;height:5px;border-radius:50%;
+  background:var(--accent);opacity:.7;
+}
+.cta-close{
+  margin-top:48px;padding-top:36px;
+  border-top:1px solid rgba(255,255,255,.05);
+  font-size:16px;color:var(--muted);line-height:1.8;
+}
+.cta-close strong{color:var(--text)}
+.cta-close .big{
+  display:block;margin-top:20px;
+  font-family:'Playfair Display',serif;
+  font-size:clamp(18px,3vw,24px);font-style:italic;
+  color:var(--accent);
+}
+
+/* ── OUTRO ───────────────────────────────────────── */
+.outro{
+  padding:56px 0 24px;text-align:center;
+  color:var(--muted);font-size:16px;line-height:1.8;
+}
+.outro strong{color:var(--text)}
+.outro .hi{color:var(--accent)}
+
+/* ── RESPONSIVE ──────────────────────────────────── */
+/* ── HANDWRITING ─────────────────────────────────── */
+.handwrite{font-family:'Caveat',cursive;line-height:1.35}
+.hw-intro{
+  font-size:clamp(20px,3.2vw,26px);
+  color:rgba(226,221,216,.6);font-weight:400;margin-bottom:8px;
+}
+.hw-list{
+  font-size:clamp(17px,2.6vw,22px);
+  color:rgba(226,221,216,.42);font-weight:400;
+  margin-bottom:18px;padding-bottom:16px;
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.hw-but{
+  font-size:clamp(19px,3vw,25px);
+  color:var(--text);font-weight:600;
+}
+.hw-but em{font-style:normal;color:var(--accent)}
+
+/* ── DUALITY (img + handwriting side-by-side) ────── */
+.duality{
+  display:grid;grid-template-columns:210px 1fr;
+  gap:0 28px;align-items:center;margin:36px 0;
+}
+.duality-img img{width:100%;border-radius:6px;display:block}
+
+/* ── FLOAT (text wrapping) ───────────────────────── */
+figure.float-r{
+  float:right;width:200px;
+  margin:4px 0 20px 28px;
+}
+figure.float-l{
+  float:left;width:150px;
+  margin:4px 28px 20px 0;
+}
+figure.float-r img,figure.float-l img{
+  width:100%;border-radius:6px;display:block;
+}
+.cf::after{content:'';display:table;clear:both}
+
+/* ── SIMPLE WORDS (img_05 with flanking text) ─────── */
+.sw-wrap{margin:36px 0}
+.sw-label{
+  display:block;text-align:center;
+  font-family:'Caveat',cursive;
+  font-size:clamp(28px,5vw,40px);
+  color:rgba(226,221,216,.55);
+  letter-spacing:1px;margin-bottom:24px;
+}
+/* reuse split-illus inside sw-wrap — override text styles */
+.sw-wrap .split-illus{align-items:center}
+.sw-wrap .si-head,.sw-wrap .si-body{
+  display:flex;flex-direction:column;
+  justify-content:center;gap:8px;
+}
+/* both main labels same style */
+.sw-wrap p.sw-main{
+  font-size:clamp(17px,2.6vw,22px);font-weight:800;
+  color:#fff;margin-bottom:0;line-height:1.2;
+}
+/* small orange qualifier — no border */
+.sw-wrap p.sw-sub{
+  font-size:13px;color:var(--accent);
+  font-weight:500;margin-bottom:0;
+  letter-spacing:.3px;
+}
+
+/* ── ICEBERG LAYOUT ──────────────────────────────── */
+.iceberg-sect{margin:40px 0}
+.iceberg-title{
+  font-family:'Caveat',cursive;
+  font-size:clamp(26px,4.5vw,38px);
+  color:rgba(226,221,216,.7);margin-bottom:20px;text-align:center;
+}
+.iceberg-grid{
+  display:grid;grid-template-columns:160px 1fr;
+  gap:0 16px;align-items:stretch;
+}
+.iceberg-left{
+  display:flex;flex-direction:column;
+  justify-content:space-between;padding:10% 0;
+}
+.il-above,.il-below{display:flex;flex-direction:column;gap:6px}
+.il-word{
+  font-size:clamp(16px,2.2vw,20px);font-weight:800;
+  letter-spacing:.5px;color:var(--text);
+}
+.il-word.acc{color:var(--accent)}
+.il-dash{color:var(--muted);font-weight:400}
+.il-sub{
+  font-size:11px;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--muted);line-height:1.6;
+}
+.il-sub.acc{color:rgba(224,61,26,.6)}
+.iceberg-right img{width:100%;border-radius:6px;display:block}
+
+/* ── TABLET ─────────────────────────────────────── */
+@media(max-width:768px){
+  .hero{grid-template-columns:1fr;min-height:auto;padding:80px 0 48px}
+  .hero-img{display:none}
+}
+/* ── MOBILE ─────────────────────────────────────── */
+@media(max-width:640px){
+  #snav{display:none}
+  .versus{grid-template-columns:1fr;gap:24px 0}
+  .versus-divider{display:none}
+  .split-illus{grid-template-columns:1fr;gap:20px 0}
+  .si-img{order:-1}
+  .wrap{padding:0 18px 80px}
+  .moment{margin:40px -18px;padding:44px 18px}
+  .cta-final{margin:48px -18px 0;padding:48px 18px}
+  .check-sect{padding:36px 0;margin-bottom:56px}
+  .year-gap{padding:28px 0}
+  .yg-big{letter-spacing:-2px}
+  .yg-vs{padding:0 12px;font-size:20px}
+  .bridge-labs{flex-direction:column;gap:4px}
+  .cases .case-n{font-size:40px}
+  .sec-bg-num{font-size:90px}
+  .duality{grid-template-columns:1fr}
+  .duality-img{max-width:210px;margin:0 auto 20px}
+  figure.float-r,figure.float-l{float:none;width:160px;margin:20px auto;display:block}
+  .iceberg-grid{grid-template-columns:1fr}
+  .iceberg-left{flex-direction:row;justify-content:space-between;padding:12px 0}
+  .il-above,.il-below{text-align:center}
+  .sw-wrap .split-illus{grid-template-columns:1fr;gap:16px 0}
+}
+</style>
+</head>
+<body>
+
+<!-- PROGRESS BAR -->
+<div id="bar">
+  <div id="bar-track"><div id="bar-fill"></div></div>
+  <span id="bar-pct">0%</span>
+  <span id="bar-name">Начало</span>
+</div>
+
+<!-- SIDE NAV -->
+<nav id="snav">
+  <div class="sn on" data-t="s0"><span class="tip">Начало</span></div>
+  <div class="sn" data-t="s1"><span class="tip">01 — Я тоже срывалась</span></div>
+  <div class="sn" data-t="s2"><span class="tip">02 — Инсайты и тело</span></div>
+  <div class="sn" data-t="s3"><span class="tip">03 — Следующий уровень</span></div>
+  <div class="sn" data-t="s4"><span class="tip">04 — Знакомые истории</span></div>
+  <div class="sn" data-t="s5"><span class="tip">05 — Мини-практика</span></div>
+  <div class="sn" data-t="s6"><span class="tip">06 — Что это значило</span></div>
+  <div class="sn" data-t="s7"><span class="tip">07 — Когда разговоров мало</span></div>
+  <div class="sn" data-t="s8"><span class="tip">08 — Что дальше</span></div>
+  <div class="sn" data-t="s9"><span class="tip">09 — Прожить, а не понять</span></div>
+</nav>
+
+<main class="wrap">
+
+<!-- ── HERO ── -->
+<section id="s0" class="sec" aria-label="Введение">
+  <div class="hero">
+    <div class="hero-kicker">Бесплатный гайд</div>
+    <h1>Почему ты всё&nbsp;понимаешь,<br>но ничего<br><em>не меняется</em></h1>
+    <p class="hero-lead">
+      Для тех, кто уже был в терапии, читал книги, проходил курсы — и всё равно
+      обнаруживает себя в тех же реакциях.
+    </p>
+    <div class="hero-meta">
+      <span class="hero-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        ~12 мин чтения
+      </span>
+      <span class="hero-tag">Телесная терапия</span>
+      <span class="hero-tag">PF_R</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── САМОПРОВЕРКА ── -->
+<section class="check-sect" aria-label="Для кого этот гайд">
+  <span class="check-kicker">это для тебя, если хотя бы одно — да:</span>
+  <div class="check-items">
+    <div class="check-item">
+      <span class="ci-plus">+</span>
+      <span>Ты уже в терапии больше года, а тело в конфликтах реагирует как прежде</span>
+    </div>
+    <div class="check-item">
+      <span class="ci-plus">+</span>
+      <span>Ты можешь объяснить свои реакции — но не можешь их остановить</span>
+    </div>
+    <div class="check-item">
+      <span class="ci-plus">+</span>
+      <span>Ты устала от разговоров и хочешь почувствовать реальный сдвиг</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── 01 ── -->
+<section id="s1" class="sec">
+  <div class="sec-wrap">
+    <span class="sec-bg-num">01</span>
+    <div class="sec-head">
+      <span class="sec-label">01 — исходная точка</span>
+      <h2>Я тоже всё понимала,<br>но <em>всё равно срывалась</em></h2>
+    </div>
+  </div>
+
+  <p>Если ты открыла этот текст, очень вероятно, что <strong>ты не новичок.</strong></p>
+  <p>У тебя уже был терапевт. Возможно — не один.</p>
+
+  <ul class="lst">
+    <li>Ты читала книги, проходила курсы, марафоны, ретриты.</li>
+    <li>Ты можешь объяснить, откуда у тебя эта реакция.</li>
+    <li>Можешь разложить своё детство как кейс для учебника по психологии.</li>
+  </ul>
+
+  <div class="duality">
+    <figure class="duality-img">
+      <img src="lm_images/img_01_woman_ribbons.png" alt="Женщина — головой всё понимает, но тело не в курсе">
+    </figure>
+    <div>
+      <p class="handwrite hw-intro">Головой ты знаешь:</p>
+      <p class="handwrite hw-list">это триггер<br>это моя травма<br>это детский опыт</p>
+      <p class="handwrite hw-but">Но тело в этот момент как будто даже <em>не в курсе,</em> что ты всё поняла.</p>
+    </div>
+  </div>
+
+  <p>Я знаю это состояние изнутри.</p>
+  <p>Я тоже была той самой клиенткой, которая может на сессии с терапевтом
+  блестяще анализировать свои реакции — а вечером дома вести себя так,
+  как будто <strong>никаких сессий не было вообще.</strong></p>
+
+  <div class="spoiler">
+    <div class="spoiler-kicker">Спойлер</div>
+    <div class="spoiler-text">
+      Ты не бракованная.<br>Ты просто работаешь <strong>не с тем слоем.</strong>
+    </div>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- ── 02 ── -->
+<section id="s2" class="sec">
+  <div class="sec-wrap">
+    <span class="sec-bg-num">02</span>
+    <div class="sec-head">
+      <span class="sec-label">02 — почему так происходит</span>
+      <h2>Почему инсайты не успевают<br><em>за твоим телом</em></h2>
+    </div>
+  </div>
+
+  <p>Разговорная терапия делает важную работу:</p>
+
+  <ul class="lst">
+    <li>даёт тебе понимание</li>
+    <li>связывает прошлое и настоящее</li>
+    <li>помогает увидеть паттерны, которые раньше были в слепой зоне</li>
+  </ul>
+
+  <!-- img_02 float right — текст обтекает -->
+  <div class="cf">
+    <figure class="float-r">
+      <img src="lm_images/img_02_therapy_session.png" alt="Сессия разговорной терапии">
+    </figure>
+    <p>Разговорная терапия делает важную работу: даёт тебе понимание, связывает прошлое и настоящее, помогает увидеть паттерны, которые раньше были в слепой зоне.</p>
+    <p>Но есть момент, в который она останавливается.</p>
+  </div>
+
+  <div class="moment">
+    <p>В момент, когда тебя накрывает, рулит<br>не та часть, которая «всё понимает».<br><span>Рулит тело.</span></p>
+  </div>
+
+  <div class="split-illus" style="margin-top:40px;align-items:flex-start">
+    <div class="si-head">
+      <span class="si-tag-h blue">голова говорит</span>
+      <p class="si-text">«Это не он виноват, это меня триггернуло. Он просто опоздал на 15 минут, а не БРОСИЛ МЕНЯ.»</p>
+    </div>
+    <figure class="si-img">
+      <img src="lm_images/img_03_head_body_split.png" alt="Иллюстрация: спокойная голова и связанное реакциями тело">
+    </figure>
+    <div class="si-body">
+      <span class="si-tag-h red">тело делает</span>
+      <ul class="si-list">
+        <li>сжимает челюсть</li>
+        <li>заливает жаром лицо</li>
+        <li>сдавливает грудь</li>
+        <li>бей / беги / замри</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- img_04 float left — текст обтекает -->
+  <div class="cf" style="margin-top:44px">
+    <figure class="float-l">
+      <img src="lm_images/img_04_frozen_brain.png" alt="Мозг в защитной заморозке — реакция, застывшая с детства">
+    </figure>
+    <h3>Травма в теле — это не воспоминание</h3>
+    <p>Это застывшая реакция, которая <strong>когда-то спасала тебе психику.</strong> Тогда ты не могла уйти, ответить, защититься. Твоё тело выбрало то, что помогло выжить: сжаться, замолчать, быть удобной.</p>
+    <p>Но в момент триггера это тело всё ещё живёт по той же инструкции. На диване у терапевта ты взрослая — а на кухне в конфликте тебе снова <em class="it">5, 10 или 15</em>.</p>
+  </div>
+
+  <!-- айсберг с двумя слоями -->
+  <div class="iceberg-sect">
+    <p class="iceberg-title">У травмы есть два слоя:</p>
+    <div class="iceberg-grid">
+      <div class="iceberg-left">
+        <div class="il-above">
+          <strong class="il-word">СМЫСЛОВОЙ</strong>
+        </div>
+        <div class="il-below">
+          <strong class="il-word acc">телесный</strong>
+        </div>
+      </div>
+      <figure class="iceberg-right">
+        <img src="lm_images/img_06_iceberg.png" alt="Айсберг: верхний — смысловой слой (мысли, выводы), нижний — телесный (замирание, сжатие, автореакции)">
+      </figure>
+    </div>
+  </div>
+
+  <div class="pull">
+    Ты уже очень много вложила в первый слой.<br>
+    Почти не трогала <strong>второй.</strong>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- ── 03 ── -->
+<section id="s3" class="sec">
+  <div class="sec-wrap">
+    <span class="sec-bg-num">03</span>
+    <div class="sec-head">
+      <span class="sec-label">03 — диагноз</span>
+      <h2>Ты доросла до <em>следующего уровня</em></h2>
+    </div>
+  </div>
+
+  <p>Очень легко скатиться в мысль:</p>
+
+  <ul class="lst">
+    <li>Раз я хожу к терапевту и всё равно срываюсь — со мной что-то не так</li>
+    <li>Надо ещё сильнее стараться</li>
+    <li>Надо ещё больше «работать над собой»</li>
+  </ul>
+
+  <div class="call">
+    <b>На самом деле часто это значит только одно:</b><br>
+    ты дошла до потолка именно этого формата работы.
+  </div>
+
+  <div class="sw-wrap">
+    <span class="sw-label">простыми словами:</span>
+    <div class="split-illus">
+      <div class="si-head">
+        <p class="sw-main">разговорная терапия</p>
+        <p class="sw-sub">заточена под голову</p>
+      </div>
+      <figure class="si-img">
+        <img src="lm_images/img_05_brain_body_half.png" alt="Мозг и тело: разговорная терапия работает с головой, срывы управляются телом">
+      </figure>
+      <div class="si-body">
+        <p class="sw-sub">твои срывы</p>
+        <p class="sw-main">управляются телом</p>
+      </div>
+    </div>
+  </div>
+
+  <p>Когда ты уже 2–3 года в терапии и всё ещё чувствуешь себя так, как год назад —
+  это не значит, что терапия «плохая» или ты «не старалась».</p>
+  <p>Чаще всего это значит: <em class="o">пора добавить телесный уровень,
+  а не бесконечно увеличивать дозу разговоров.</em></p>
+</section>
+
+<div class="div"></div>
+
+<!-- ── 04 ── -->
+<section id="s4" class="sec">
+  <div class="sec-wrap">
+    <span class="sec-bg-num">04</span>
+    <div class="sec-head">
+      <span class="sec-label">04 — узнаешь себя?</span>
+      <h2>Очень <em>знакомые</em> истории</h2>
+    </div>
+  </div>
+
+  <p style="color:var(--muted);font-style:italic">посмотри, найдёшь ли ты здесь себя</p>
+
+  <div class="cases">
+    <div class="case-item">
+      <span class="case-n">01</span>
+      <div>
+        <div class="case-tags">
+          <span class="case-tag name">Марина, 34</span>
+          <span class="case-tag">2 года терапии</span>
+          <span class="case-tag">объясняет свои паттерны</span>
+          <span class="case-tag">видит детские сценарии</span>
+        </div>
+        <p class="case-but">Но когда ребёнок в третий раз проливает сок на пол — она орёт так, будто её предали.</p>
+      </div>
+    </div>
+
+    <div class="case-item">
+      <span class="case-n">02</span>
+      <div>
+        <div class="case-tags">
+          <span class="case-tag name">Алина, 28</span>
+          <span class="case-tag">читала про созависимость</span>
+          <span class="case-tag">знает про границы</span>
+        </div>
+        <p class="case-but">Но как только в её жизнь заходит «тот самый» — она снова забывает о себе, подстраивается, терпит, пока не выгорает до нуля.</p>
+      </div>
+    </div>
+
+    <div class="case-item">
+      <span class="case-n">03</span>
+      <div>
+        <div class="case-tags">
+          <span class="case-tag name">Света, 37</span>
+          <span class="case-tag">прошла расстановки</span>
+          <span class="case-tag">работала с родом</span>
+          <span class="case-tag">читала «Тело помнит всё»</span>
+        </div>
+        <p class="case-but">Но при любом конфликте с близким: каменеет лицо, сжимается живот, ночью бессонница и ощущение внутренней сирены.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="year-gap">
+    <div class="yg-side left">
+      <span class="yg-label blue">ГОЛОВА</span>
+      <span class="yg-big">2026</span>
+      <span class="yg-note">обновляется</span>
+    </div>
+    <div class="yg-vs">≠</div>
+    <div class="yg-side right">
+      <span class="yg-label red">ТЕЛО</span>
+      <span class="yg-big">там же</span>
+      <span class="yg-note">где было больно</span>
+    </div>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- ── 05 ── -->
+<section id="s5" class="sec">
+  <div class="sec-wrap">
+    <span class="sec-bg-num">05</span>
+    <div class="sec-head">
+      <span class="sec-label">05 — попробуй прямо сейчас</span>
+      <h2>Мини-практика:<br><em>честный разговор с телом</em> за 10 минут</h2>
+    </div>
+  </div>
+
+  <div class="call blue">
+    Это не «магия» и не «полноценная сессия» — маленький честный эксперимент.
+    Он не заменит большую работу, но покажет, <b>где именно ты застряла.</b>
+  </div>
+
+  <ul class="lst">
+    <li>найди 10 минут без людей и телефона</li>
+    <li>сделай шаг за шагом, не перепрыгивая</li>
+  </ul>
+
+  <div class="acc open">
+    <button class="acc-btn"><span>Шаг 1. Выбери ситуацию</span><span class="acc-ico">+</span></button>
+    <div class="acc-body" style="max-height:500px">
+      <div class="acc-inner">
+        <p>Вспомни что-то недавнее, где ты повела себя «не так, как хотела»:</p>
+        <ul>
+          <li class="dim">накричала</li>
+          <li class="dim">замолчала и проглотила</li>
+          <li class="dim">всю ночь прокручивала разговор в голове</li>
+        </ul>
+        <p style="margin-top:12px"><em>Не бери самый травматичный эпизод жизни.</em></p>
+        <p>Достаточно чего-то <strong>среднего по боли, но живого.</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="acc">
+    <button class="acc-btn"><span>Шаг 2. Закрой глаза и найди в теле одно ощущение</span><span class="acc-ico">+</span></button>
+    <div class="acc-body">
+      <div class="acc-inner">
+        <p>Не три, не десять — <strong>одно.</strong></p>
+        <p class="dim">Где сейчас больше всего отзывается этот эпизод?</p>
+        <p>Это может быть: сжатие в груди, ком в горле, напряжение в челюсти, спазм в животе, тяжесть в плечах — или наоборот пустота, онемение.</p>
+        <p>Не анализируй. Просто отметь: <strong>вот здесь.</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="acc">
+    <button class="acc-btn"><span>Шаг 3. Дай этому быть 30 секунд</span><span class="acc-ico">+</span></button>
+    <div class="acc-body">
+      <div class="acc-inner">
+        <p>Если нужно — включи таймер. В эти 30 секунд твоя задача:</p>
+        <ul>
+          <li>не <strong>успокоить</strong></li>
+          <li>не <strong>раздышать</strong></li>
+          <li>не <strong>заполнить светом</strong></li>
+        </ul>
+        <p>а просто <strong>не убегать.</strong></p>
+        <p>Отмечай: насколько это плотное, горячее/холодное/тяжёлое. <em>Только наблюдаешь. Без попыток исправить.</em></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="acc">
+    <button class="acc-btn"><span>Шаг 4. Спроси у тела</span><span class="acc-ico">+</span></button>
+    <div class="acc-body">
+      <div class="acc-inner">
+        <p><em>Что ты тогда хотела сделать, но не смогла?</em></p>
+        <p>Не «что я думаю», а именно: что это ощущение хочет.</p>
+        <p>Часто приходит не фраза, а импульс: крикнуть, уйти, хлопнуть дверью, сказать «мне больно», не извиняться.</p>
+        <p><em>Уловить, какое действие было тогда невозможно.</em></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="acc">
+    <button class="acc-btn"><span>Шаг 5. Дай себе микро-версию этого действия сейчас</span><span class="acc-ico">+</span></button>
+    <div class="acc-body">
+      <div class="acc-inner">
+        <p>Не на реальном человеке — в безопасном формате.</p>
+        <ul>
+          <li>Если хотелось кричать — <strong>крикни в подушку</strong></li>
+          <li>Если хотелось уйти — <strong>встань и сделай несколько шагов</strong></li>
+          <li>Если хотелось сказать «мне больно» — <strong>скажи это вслух</strong> в пустой комнате</li>
+        </ul>
+        <p>Да, это может выглядеть глупо. <em>Именно поэтому тогда ты этого не сделала.</em></p>
+        <p><strong>Сейчас твоя задача — показать телу, что теперь это движение возможно</strong> хотя бы в таком, пробном формате.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- ── 06 ── -->
+<section id="s6" class="sec">
+  <div class="sec-wrap">
+    <span class="sec-bg-num">06</span>
+    <div class="sec-head">
+      <span class="sec-label">06 — что это было</span>
+      <h2>Что ты только что сделала <em>на самом деле</em></h2>
+    </div>
+  </div>
+
+  <p>Вполне возможно, что внутри уже звучит «И что это даёт?» или «Я и сама могу покричать в подушку».</p>
+
+  <div class="pull">Суть не в подушке.<br><strong>Суть — в последовательности:</strong></div>
+
+  <ul class="signs">
+    <li><span class="dot"></span><span>ты вспомнила конкретную ситуацию</span></li>
+    <li><span class="dot"></span><span>вместо анализа — <strong>пошла в тело</strong></span></li>
+    <li><span class="dot"></span><span>дала ощущению время и внимание</span></li>
+    <li><span class="dot"></span><span>спросила, чего <strong>тогда</strong> хотелось на уровне действия</span></li>
+    <li><span class="dot"></span><span>позволила себе хотя бы чуть-чуть <strong>сделать</strong> то, что тогда пришлось сжать</span></li>
+  </ul>
+
+  <div class="bridge-wrap">
+    <div class="bridge-labs">
+      <span class="bl-from">«я всё понимаю»</span>
+      <span class="bl-to">«реагирую иначе»</span>
+    </div>
+    <figure style="margin:0">
+      <img src="lm_images/img_07_bridge.png" alt="">
+    </figure>
+  </div>
+
+  <div class="call blue">
+    <b>Ты начала разговаривать с телом на его языке:</b> ощущений и движения, а не только через мысли.<br><br>
+    Это ещё не PF_R. Но это уже <b>не чисто разговорная терапия.</b><br>
+    Это тот самый «следующий слой», которого тебе всё это время не хватало.
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- ── 07 ── -->
+<section id="s7" class="sec">
+  <div class="sec-wrap">
+    <span class="sec-bg-num">07</span>
+    <div class="sec-head">
+      <span class="sec-label">07 — честный разговор</span>
+      <h2>Когда разговорная терапия<br><em>перестаёт быть</em> единственным ответом</h2>
+    </div>
+  </div>
+
+  <div class="call">
+    <span class="tag">Важно</span>
+    Речь не о том, чтобы бросить терапевта или объявить всех специалистов бесполезными.
+    Если бы ты вообще не прошла этот путь, <b>ты бы вряд ли добралась до этого текста.</b>
+  </div>
+
+  <p>Но есть несколько честных признаков, что для тебя этот формат уже отработал своё:</p>
+
+  <ul class="lst">
+    <li>ты больше года в терапии, а тело в острых ситуациях реагирует как раньше</li>
+    <li>ты можешь заранее предсказать инсайт, который снова услышишь на сессии</li>
+    <li>ты устаёшь от разговоров не потому что «лень» — а потому что <em class="it">я это уже тысячу раз проговаривала</em></li>
+    <li>внутри тянет не к новым объяснениям, а к тому, чтобы <strong>почувствовать реальный сдвиг</strong> хотя бы на 10–20%</li>
+  </ul>
+
+  <div class="moment">
+    <p>Голова уже сделала свою часть работы.<br><span>Дальше очередь тела.</span></p>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- ── 08 ── -->
+<section id="s8" class="sec">
+  <div class="sec-wrap">
+    <span class="sec-bg-num">08</span>
+    <div class="sec-head">
+      <span class="sec-label">08 — следующий шаг</span>
+      <h2>Что можно <em>сделать дальше</em></h2>
+    </div>
+  </div>
+
+  <p>Если убрать имена методик, останется простой факт:</p>
+
+  <div class="call">
+    Чтобы изменились реакции, нужно, чтобы <b>тело получило новый опыт</b>
+    там, где раньше было только замораживание и сжатие.
+  </div>
+
+  <p>Ты можешь:</p>
+  <ul class="lst">
+    <li>возвращаться к практике из этого гайда и отслеживать, как меняется ощущение в похожих ситуациях</li>
+    <li>честно поговорить с текущим терапевтом: <em class="it">«Мне хочется добавить в работу телесный уровень, давай подумаем, как это сделать или к кому пойти дополнительно»</em></li>
+    <li>начать исследовать безопасные форматы телесной работы: телесно-ориентированная терапия, PF_R, соматические практики</li>
+  </ul>
+
+  <div class="pull">
+    Главное — перестать делать вид, что проблема решится,<br>
+    если ещё раз <strong>очень умно о ней поговорить.</strong>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- ── 09 ── -->
+<section id="s9" class="sec">
+  <div class="sec-wrap">
+    <span class="sec-bg-num">09</span>
+    <div class="sec-head">
+      <span class="sec-label">09 — если откликается</span>
+      <h2>Если хочешь не только понимать,<br>но <em>прожить</em></h2>
+    </div>
+  </div>
+
+  <!-- img_08 float right — личная заметка обтекает -->
+  <div class="cf">
+    <figure class="float-r" style="width:220px">
+      <img src="lm_images/img_08_pfr_photo.jpg" alt="Сессия PF_R — телесная работа с Анастасией">
+    </figure>
+    <p>То, чем я занимаюсь — PF_R — это не замена терапии и не волшебная кнопка «стереть прошлое».</p>
+    <p>Это формат, где мы работаем не с тем, <strong>что ты думаешь</strong> о своей истории, а с тем, <em class="o">как эта история живёт в твоём теле:</em> где застряло «замри», где не случилось «сказать», где до сих пор держится «я не имею права».</p>
+    <p>Часто это выглядит неэстетично. Но именно за этим приходят те, кто уже наелся красивых объяснений.</p>
+  </div>
+
+  <!-- финальный CTA -->
+  <div class="cta-final">
+    <p class="cta-trigger">
+      Если ты читаешь эти строки и внутри откликается:
+    </p>
+    <ul class="cta-echoes">
+      <li><em>«Да, это про меня»</em></li>
+      <li><em>«Я всё понимаю, но всё равно...»</em></li>
+    </ul>
+
+    <a href="https://t.me/Master_AnA" target="_blank" rel="noopener" class="cta-link">
+      Дать телу шанс догнать голову <span class="arrow">→</span>
+    </a>
+
+    <p class="cta-pfr-note">
+      <strong>PF_R — интенсив и индивидуальная работа.</strong><br>
+      После этого уходит:
+    </p>
+    <ul class="cta-outcomes">
+      <li>ощущение «я всё понимаю, но ничего не меняется»</li>
+      <li>автоматические реакции, которые ты уже устала объяснять себе</li>
+      <li>необходимость каждый раз заново объяснять партнёру, почему ты такая</li>
+    </ul>
+
+    <div class="cta-close">
+      <p>Дальше у тебя всегда есть выбор:<br>
+      остаться на уровне инсайтов — или попробовать зайти глубже.</p>
+      <p style="margin-top:16px"><strong>Уже сам факт, что ты дочитала до конца</strong> и честно посмотрела на своё тело — это не мало.<br>
+      Ты перестала делать вид, что «со мной всё нормально, просто нужно ещё пару книжек».</p>
+      <span class="big">И это уже очень большой шаг.</span>
+    </div>
+  </div>
+</section>
+
+</main><!-- /wrap -->
+
+<script>
+const fill = document.getElementById('bar-fill');
+const pct  = document.getElementById('bar-pct');
+const nm   = document.getElementById('bar-name');
+
+const secs = [
+  {id:'s0',label:'Начало'},
+  {id:'s1',label:'01 — Я тоже срывалась'},
+  {id:'s2',label:'02 — Инсайты и тело'},
+  {id:'s3',label:'03 — Следующий уровень'},
+  {id:'s4',label:'04 — Знакомые истории'},
+  {id:'s5',label:'05 — Мини-практика'},
+  {id:'s6',label:'06 — Что это значило'},
+  {id:'s7',label:'07 — Когда разговоров мало'},
+  {id:'s8',label:'08 — Что дальше'},
+  {id:'s9',label:'09 — Прожить, а не понять'},
+];
+
+const dots = document.querySelectorAll('.sn');
+
+function onScroll(){
+  const st = window.scrollY;
+  const h  = document.documentElement.scrollHeight - window.innerHeight;
+  const p  = Math.round(st / h * 100);
+  fill.style.width = p + '%';
+  pct.textContent  = p + '%';
+
+  let cur = secs[0];
+  secs.forEach(s => {
+    const el = document.getElementById(s.id);
+    if(el && el.getBoundingClientRect().top <= 100) cur = s;
+  });
+  nm.textContent = cur.label;
+
+  const idx = secs.findIndex(s => s.id === cur.id);
+  dots.forEach((d,i) => d.classList.toggle('on', i === idx));
+}
+
+window.addEventListener('scroll', onScroll, {passive:true});
+
+dots.forEach(d => {
+  d.addEventListener('click', () => {
+    document.getElementById(d.dataset.t)?.scrollIntoView({behavior:'smooth'});
+  });
+});
+
+// Reveal
+const io = new IntersectionObserver(es => {
+  es.forEach(e => { if(e.isIntersecting) e.target.classList.add('in'); });
+}, {threshold:.05});
+document.querySelectorAll('.sec').forEach(s => io.observe(s));
+
+// Accordion
+document.querySelectorAll('.acc-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.acc');
+    const body = item.querySelector('.acc-body');
+    const open = item.classList.contains('open');
+    document.querySelectorAll('.acc.open').forEach(a => {
+      a.classList.remove('open');
+      a.querySelector('.acc-body').style.maxHeight = '0';
+    });
+    if(!open){
+      item.classList.add('open');
+      body.style.maxHeight = body.scrollHeight + 'px';
+    }
+  });
+});
+</script>
+</body>
+</html>
