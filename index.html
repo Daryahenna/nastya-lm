@@ -803,8 +803,18 @@ figure.float-r img,figure.float-l img{
   #snav{display:none}
   .versus{grid-template-columns:1fr;gap:24px 0}
   .versus-divider{display:none}
-  .split-illus{grid-template-columns:1fr;gap:20px 0}
-  .si-img{order:-1}
+
+  /* split-illus (голова/тело, мозг/тело): сжатая 3-колонка, текст по бокам */
+  .split-illus{grid-template-columns:1fr 100px 1fr;gap:0 10px}
+  .si-tag-h{font-size:15px;margin-bottom:8px}
+  .si-text{font-size:12px;line-height:1.55}
+  .si-list li{font-size:13px;padding:5px 0}
+
+  /* sw-wrap (мозг+тело): сжатая 3-колонка */
+  .sw-wrap .split-illus{grid-template-columns:1fr 90px 1fr;gap:0 8px}
+  .sw-wrap p.sw-main{font-size:15px}
+  .sw-wrap p.sw-sub{font-size:11px}
+
   .wrap{padding:0 18px 80px}
   .moment{margin:40px -18px;padding:44px 18px}
   .cta-final{margin:48px -18px 0;padding:48px 18px}
@@ -812,16 +822,26 @@ figure.float-r img,figure.float-l img{
   .year-gap{padding:28px 0}
   .yg-big{letter-spacing:-2px}
   .yg-vs{padding:0 12px;font-size:20px}
-  .bridge-labs{flex-direction:column;gap:4px}
+
+  /* bridge: «я всё понимаю» слева, «реагирую иначе» справа */
+  .bridge-labs{flex-direction:row;justify-content:space-between;align-items:baseline;gap:8px}
+  .bl-from,.bl-to{font-size:clamp(15px,4.5vw,20px)}
+
   .cases .case-n{font-size:40px}
   .sec-bg-num{font-size:90px}
   .duality{grid-template-columns:1fr}
   .duality-img{max-width:210px;margin:0 auto 20px}
-  figure.float-r,figure.float-l{float:none;width:160px;margin:20px auto;display:block}
-  .iceberg-grid{grid-template-columns:1fr}
-  .iceberg-left{flex-direction:row;justify-content:space-between;padding:12px 0}
-  .il-above,.il-below{text-align:center}
-  .sw-wrap .split-illus{grid-template-columns:1fr;gap:16px 0}
+
+  /* float-r остаётся центрированным; float-l уходит вправо чтобы h3 шёл сверху */
+  figure.float-r{float:none;width:140px;margin:20px auto;display:block}
+  figure.float-l{float:right;width:100px;margin:4px 0 16px 16px}
+
+  /* айсберг: СМЫСЛОВОЙ → картинка → телесный (вертикально) */
+  .iceberg-grid{display:flex;flex-direction:column}
+  .iceberg-left{display:contents}
+  .il-above{order:0;text-align:center;padding:8px 0}
+  .iceberg-right{order:1}
+  .il-below{order:2;text-align:center;padding:8px 0}
 }
 </style>
 </head>
