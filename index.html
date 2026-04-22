@@ -784,7 +784,7 @@ figure.float-r img,figure.float-l img{
   font-size:clamp(16px,2.2vw,20px);font-weight:800;
   letter-spacing:.5px;color:var(--text);
 }
-.il-word.acc{color:var(--accent)}
+.il-word.acc{color:var(--accent);border:none;border-radius:0;margin:0;overflow:visible;display:inline}
 .il-dash{color:var(--muted);font-weight:400}
 .il-sub{
   font-size:11px;letter-spacing:1.5px;text-transform:uppercase;
@@ -804,16 +804,22 @@ figure.float-r img,figure.float-l img{
   .versus{grid-template-columns:1fr;gap:24px 0}
   .versus-divider{display:none}
 
-  /* split-illus (голова/тело, мозг/тело): сжатая 3-колонка, текст по бокам */
-  .split-illus{grid-template-columns:1fr 100px 1fr;gap:0 10px}
-  .si-tag-h{font-size:15px;margin-bottom:8px}
-  .si-text{font-size:12px;line-height:1.55}
-  .si-list li{font-size:13px;padding:5px 0}
+  /* split-illus (голова/тело): текст → картинка → текст (стек) */
+  .split-illus{grid-template-columns:1fr;gap:14px 0}
+  .split-illus .si-head{order:0}
+  .split-illus .si-img{order:1;max-width:200px;margin:0 auto}
+  .split-illus .si-body{order:2}
+  .si-tag-h{font-size:16px;margin-bottom:8px}
+  .si-text{font-size:14px;line-height:1.6}
+  .si-list li{font-size:14px;padding:5px 0}
 
-  /* sw-wrap (мозг+тело): сжатая 3-колонка */
-  .sw-wrap .split-illus{grid-template-columns:1fr 90px 1fr;gap:0 8px}
-  .sw-wrap p.sw-main{font-size:15px}
-  .sw-wrap p.sw-sub{font-size:11px}
+  /* sw-wrap (мозг+тело): текст → картинка → текст (стек) */
+  .sw-wrap .split-illus{grid-template-columns:1fr;gap:12px 0}
+  .sw-wrap .si-head{order:0}
+  .sw-wrap .si-img{order:1;max-width:160px;margin:0 auto}
+  .sw-wrap .si-body{order:2}
+  .sw-wrap p.sw-main{font-size:17px}
+  .sw-wrap p.sw-sub{font-size:12px}
 
   .wrap{padding:0 18px 80px}
   .moment{margin:40px -18px;padding:44px 18px}
@@ -836,12 +842,13 @@ figure.float-r img,figure.float-l img{
   figure.float-r{float:none;width:140px;margin:20px auto;display:block}
   figure.float-l{float:right;width:100px;margin:4px 0 16px 16px}
 
-  /* айсберг: СМЫСЛОВОЙ → картинка → телесный (вертикально) */
+  /* айсберг: СМЫСЛОВОЙ → картинка → телесный, метки крупнее */
   .iceberg-grid{display:flex;flex-direction:column}
   .iceberg-left{display:contents}
-  .il-above{order:0;text-align:center;padding:8px 0}
+  .il-above{order:0;text-align:center;padding:10px 0}
   .iceberg-right{order:1}
-  .il-below{order:2;text-align:center;padding:8px 0}
+  .il-below{order:2;text-align:center;padding:10px 0}
+  .il-word{font-size:clamp(22px,6vw,28px)}
 }
 </style>
 </head>
